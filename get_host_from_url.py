@@ -8,6 +8,8 @@ reobj = re.compile(r"""(?xi)\A
 ([a-z0-9\-._~%]+                                     # Named or IPv4 host
 |\[[a-z0-9\-._~%!$&'()*+,;=:]+\])                    # IPv6+ host
 """)
+
 match = reobj.search(url)
+
 if match:
     print match.group(2)
